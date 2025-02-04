@@ -86,6 +86,8 @@
                     $(this).addClass("withPdf");
                 } else if (/\.(?:mp4)$/i.test($(this).text())){
                     $(this).addClass("withMp4");
+                } else if (/\.(?:mp3)$/i.test($(this).text())){
+                    $(this).addClass("withMp3");
                 }
             });
 
@@ -97,7 +99,6 @@
                 autoStart : true
                 }
             });
-
 
             // add necessary attributes for fancybox to function (pdf)
             $('ul.form-fileupload-value > li > a.withPdf').attr({
@@ -112,17 +113,15 @@
                 'data-width': '1000'
             });
 
-            // removes attahcment=true parameter from URL for withPdf
-            $('ul.form-fileupload-value > li > a.withPdf').each(function(){
-                let oriHref = $(this).attr('href');
-                let updatedHref = oriHref.replace('.?attachment=true', '')
-                $(this).attr('href', updatedHref);
+            $('ul.form-fileupload-value > li > a.withMp3').attr({
+                'data-fancybox': '',
+                'data-type': 'video'
             });
 
-            // removes attahcment=true parameter from URL for withMp4s
-            $('ul.form-fileupload-value > li > a.withMp4').each(function(){
+            // removes attahcment=true parameter from URL
+            $('ul.form-fileupload-value > li > a.withPdf, ul.form-fileupload-value > li > a.withMp4, ul.form-fileupload-value > li > a.withMp3').each(function(){
                 let oriHref = $(this).attr('href');
-                let updatedHref = oriHref.replace('.?attachment=true', '')
+                let updatedHref = oriHref.replace('.?attachment=true', '');
                 $(this).attr('href', updatedHref);
             });
         });

@@ -17,7 +17,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Lightbox extends FileUpload {
-    public static String MESSAGE_PATH = "message/lightbox";
+    public static String MESSAGE_PATH = "messages/lightbox";
     public static String PROPERTIES_PATH = "/properties/lightbox.json";
 
     @Override
@@ -32,7 +32,7 @@ public class Lightbox extends FileUpload {
 
     @Override
     public String getDescription() {
-        return "Lightbox File Upload Element";
+        return AppPluginUtil.getMessage("Lightbox.desc", getClassName(), MESSAGE_PATH);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class Lightbox extends FileUpload {
 
     @Override
     public String getFormBuilderIcon(){
-        return "<i class=\"fas fa-file-arrow-up\"></i>";
+        return "<i class=\"fas fa-file-import\"></i>";
     }
 
     @Override
@@ -57,7 +57,7 @@ public class Lightbox extends FileUpload {
 
     @Override
     public String getLabel(){
-        return AppPluginUtil.getMessage(getClassName() + ".label", getClassName(), MESSAGE_PATH);
+        return AppPluginUtil.getMessage("Lightbox.label", getClassName(), MESSAGE_PATH);
     }
 
     @Override
@@ -147,8 +147,6 @@ public class Lightbox extends FileUpload {
         String html = FormUtil.generateElementHtml(this, formData, template, dataModel);
         return html;
     }
-
-
 
 
 }

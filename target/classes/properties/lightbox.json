@@ -14,7 +14,7 @@
             "label" : "@@form.fileupload.label@@",
             "type" : "textfield",
             "required" : "True",
-            "value" : "@@org.joget.apps.form.lib.FileUpload.pluginLabel@@"
+            "value" : "Lightbox upload"
         }]
 },
     {
@@ -46,7 +46,8 @@
             {
                 "name" : "fileType",
                 "label" : "@@form.fileupload.fileType@@",
-                "type" : "textfield"
+                "type" : "textfield",
+                "value": ".pdf;.png;.jpg;.mp3;.mp4"
             },
             {
                 "name" : "fileTypeMsg",
