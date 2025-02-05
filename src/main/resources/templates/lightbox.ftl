@@ -73,8 +73,8 @@
         </script>
     </#if>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="${request.contextPath}/plugin/org.joget.sample.Lightbox/css/fancybox.css" crossorigin="anonymous" />
+    <script src="${request.contextPath}/plugin/org.joget.sample.Lightbox/js/fancybox.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
         $(function(){
